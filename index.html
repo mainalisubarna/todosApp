@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mainali's TodosApp</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section class="vh-100" style="background-color: #ffffff;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-xl-10">
+
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-body p-5">
+
+                            <h6 class="mb-3">Todo List</h6>
+
+                            <form class="d-flex justify-content-center align-items-center mb-4" id="todoForm">
+                                <div class="form-outline flex-fill">
+                                    <input type="text" id="form1" class="form-control form-control-lg" required />
+                                    <label class="form-label" for="form1">What do you need to do today?</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg ms-2">Add</button>
+                            </form>
+
+                            <ul class="list-group mb-0" id="todosList">
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+<!-- Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Modal</h5>
+        <button type="button" class="btn-close" id="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="d-flex justify-content-center align-items-center mb-4" id="todoForm">
+            <input type="hidden" name="id" id="form3">  
+              <input type="text" id="form2" class="form-control" required />
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="editHandler()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </section>
+    <script src="./index.js"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"></script>
+</body>
+
+</html>
